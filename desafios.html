@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NFV - Desafios</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="src/stylesheets/nfv.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4 class="index-title">Network Function Virtualization</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a class="side-index" href="nfv.html">O que é NFV</a></li>
+        <li><a class="side-index" href="mudanca-cenario-de-telecomunicacoes.html">Mudança no Cenário de Telecomunicações</a></li>
+        <li><a class="side-index" href="beneficios.html">Benefícios</a></li>
+        <li class="active"><a class="side-index" href="desafios.html">Desafios</a></li>
+        <li><a class="side-index" href="conceitos-relacionados.html">Conceitos Relacionados</a></li>
+        <li><a class="side-index" href="conclusao.html">Conclusão</a></li>
+      </ul><br>
+    </div>
+
+    <div class="col-sm-9">
+        <div class="content">
+            <div id="title4" class="title">4. Desafios</div>
+            <div class="text">
+                <ul>
+                    <li><strong>Segurança e Resiliência:</strong> O desafio a ser enfrentado é a garantia de que a segurança e confiança das redes de operadoras sejam mantidas com sua
+                         virtualização. Embora uma preocupação, espera-se que as redes possam ser recriadas imediatamente após falhas e que sua segurança e confiabilidade
+                         estejam fortemente atreladas à qualidade do <em>hypervisor</em> e de suas configurações.</br>
+                        &emsp;&emsp;De uma forma geral a garantia de segurança virá a partir da resolução de dois problemas, considerados os mais preocupantes: Primeiro a
+                         garantia de que os serviços de dois clientes diferentes não sejam acessíveis um para o outro, que além de uma questão de privacidade, garante que
+                         um problema de segurança em funções de um cliente não possibilite que outros serviços sejam também afetados. Em segundo lugar é preciso que o NFV
+                         seja protegido de conteúdos recebidos pelos seus usuários, com o uso de firewalls, por exemplo, pois isso evitaria o tráfego de dados maliciosos
+                         do usuário para dentro do sistema NFV. 
+                    </li>
+                    <li><strong>Interoperabilidade:</strong> Esse é o desafio de se padronizar a forma de se virtualizar a rede a partir de máquinas virtuais e
+                         <em>hypervisors</em>. O tópico é bastante importante pois há uma grande facilidade de se criar diferentes sistemas de virtualização ao mesmo
+                          tempo que esses sistemas, embora diferentes, dependam um do outro, assim ressaltando a importância da interoperabilidade.
+                    </li>
+                    <li><strong>Retrocompatibilidade:</strong> Considerando que existem múltiplas operadoras, com diferentes versões de softwares, é necessário que, além
+                         da padronização da virtualização, haja uma compatibilidade do sistema com versões mais antigas, tendo em vista que a troca e <em>upgrade</em> de
+                          hardware e software não é algo sincronizado entre as operadoras da rede.
+                    </li>
+                    <li><strong>Escalabilidade:</strong> Considerando a grandiosidade das redes atuais, é necessário que o sistema consiga garantir uma performance
+                         aceitável para um grande número de usuários. Tal escalabilidade só será atingida com a automação de seus processos.
+                    </li>
+                    <li><strong>Simplicidade:</strong> É necessário garantir que futuras plataformas NFV sejam mais simples de se operar que as atuais, que contam com uma
+                         complexo grupo de plataformas de rede e sistemas de suporte, se mostrando uma dificuldade para implantação de redes NFV.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>
