@@ -17,11 +17,14 @@
       <h4 class="index-title">Network Function Virtualization</h4>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a class="side-index" href="nfv.html">O que é NFV</a></li>
-        <li><a class="side-index" href="mudanca-cenario-de-telecomunicacoes.html">Mudança no Cenário de Telecomunicações</a></li>
+        <li><a class="side-index" href="arquitetura.html">Arquitetura NFV</a></li>
         <li><a class="side-index" href="beneficios.html">Benefícios</a></li>
         <li><a class="side-index" href="desafios.html">Desafios</a></li>
         <li><a class="side-index" href="conceitos-relacionados.html">Conceitos Relacionados</a></li>
-        <li><a class="side-index" href="conclusao.html">Conclusão</a></li>
+        <li><a class="side-index" href="mudanca-cenario-de-telecomunicacoes.html">Mudança no Cenário de Telecomunicações</a></li>
+        <li><a class="side-index" href="modelo-empresarial.html">Modelo Empresarial</a></li>
+        <li><a class="side-index" href="casos-de-uso.html">Casos de Uso</a></li>
+        <li><a class="side-index" href="bibliografia.html">Bibliografia</a></li>
       </ul><br>
     </div>
 
@@ -29,40 +32,24 @@
         <div class="content">
             <div id="title1" class="title">1. O que é NFV</div>
             <div class="text">
-                &emsp;&emsp;Com o gradativo aumento das redes de comunicação, tornou-se cada vez mais necessária a adoção de medidas para diminuição de custos
-                de equipamento e manutenção. Dentre as soluções propostas ao problema tem-se a Virtualização das Funções de Rede (<em>NFV - Network Function Virtualization</em>), que sugere a criação de softwares que substituam os equipamentos de funções de rede. Tais hardwares virtualizados (como de criptografia, DNS, Firewalls, dentre outros) se encontram na nuvem em máquinas virtuais, que ao contrário dos equipamentos que eles substituem, são relativamente mais baratos e de fácil manuseio, por de serem constituídos apenas de <em>switches</em>, bancos de dados e servidores. Além disso, o NFV facilita a expansão da rede, pois a cada upgrade ou adição de funcionalidades de uma operadora, os processos de instalação e manutenção eram demorados, além de serem limitados a um espaço físico, tendo em vista o tamanho dos equipamentos.
-            </div>
-            <div class="subtitle">1.1 Arquitetura</div>
-            <img src="src/image/nfv.jpg">
-            <div class="text">
-                <ul>
-                    <li><strong>NFVI (Infraestrutura de NFV):</strong> Provê os recursos necessários para a execução das VNFs, usando o hardware presente no cluster de computadores
-                         (Processadores, RAM, Discos e Interfaces de Rede) e uma camada de Virtualização para criar os correspondentes componentes virtualizados.
-                    </li>
-                    <li><strong>VNFs: </strong> São a unidade central de trabalho de um sistema NFV; é a implementação virtualizada de uma função de rede que pode ser executada numa
-                         NFVI. Elas podem, em teoria, executar qualquer função previamente gerenciada por hardware específico na rede, como por ex.: roteadores, switches e firewalls.
-                    </li>
-                    <li><strong>EM: </strong> Geralmente acompanham as VNFs, gerenciando as funções da VNF (FCAPS: Fault, Configuration, Accounting, Performance and Security).
-                   </li>
-                    <li><strong>NFV M&O (Orquestrador e Gerenciador de NFV):</strong> É o módulo que gerencia e orquestra os recursos usados num sistema NFV através do submódulo
-                         VIM (Virtualized Infrastructure Manager) e também os próprios serviços de rede oferecidos pelas VNFs, por meio do submódulo VNFM (VNF Manager).
-                    </li>
-                </ul>
-            </div>
-            <div class="subtitle">1.2 Requisitos</div>
-            <div class="text">
-                <ul>
-                    <li><strong>Tecnologias da Computação em Nuvem:</strong> A implantação de um sistema NFV só é plausível graças aos equipamentos de alta 
-                        qualidade que vieram junto com a Computação de Nuvem. Dentre eles temos switches Ethernet para possibilitar o tráfego de informação entre máquinas virtuais e interfaces físicas; processamento de pacotes de alto-desempenho, possível graças a CPUs de alta velocidade e de múltiplos cores somados à bandas de comunicação com alta taxa de transmissão.<br>
-                        &emsp;&emsp;Além disso, a Computação em Nuvem contribui com métodos de otimização de recursos computacionais, que conseguem associar aplicações virtuais diretamente aos núcleos de CPU, memórias e interfaces corretas, além da reinicialização de máquinas virtuais defeituosas.<br>
-                        &emsp;&emsp;Por fim, a existência de APIs para controle de informações como o OpenFlow, OpenStack e o OpenNaaS, adicionam mais um grau de integração de tecnologias NFV. 
-                    </li>
-                    <li><strong>Servidores de Alta Capacidade: </strong> A fim de suportar a grande quantidade de funções e clientes numa mesma rede, é preciso que estejam disponíveis 
-                    servidores de alta qualidade, que além de conseguirem aguentar a carga do sistema, devem possuir componentes de padrão da indústria de mais alto nível, como por 
-                    exemplo a arquitetura x86.
-                        
-                    </li>
-                </ul>
+                &emsp;&emsp;NFV é uma possível solução para alguns problemas há tempos presentes na indústria de telecomunicação. Geralmente, os serviços 
+                providos por empresas de telecomunicações (i.e.: Oi, Vivo, Tim, etc.) consistem em operadores de rede implantando dispositivos físicos 
+                proprietários, cada um deles executando funções necessárias para um dado serviço, além de montarem a topologia da rede de dispositivos, 
+                encadeando-os da forma correta usando o espaço físico disponível para a rede; isso leva a uma reciclagem lenta de produtos e dependência 
+                em hardware especializado.<br>
+                &emsp;&emsp;Essa reciclagem lenta é algo que impacta fortemente a habilidade de melhorar e inovar os serviços providos por tais empresas, 
+                habilidade essa necessária para atender às expectativas voláteis mas também rígidas para serviços de qualidade. Assim, ao invés de melhorar 
+                o que já se usa, empresas escolhem o caminho de comprar e operar equipamentos novos cada vez mais; isso requer técnicos cada vez mais habilidosos 
+                e adaptáveis que possam operar ambientes em constante mudança, na esperança de se manterem atualizados no cenário da indústria de telecomunicações. 
+                Isso gera cada vez mais gastos de operação e de capital (OPEX e CAPEX, respectivamente) que não podem ser cobertos com taxas de inscrição mais caras, 
+                arriscando perder clientes caso contrário.<br>
+                &emsp;&emsp;Para contra-atacar essa dependência em relação às empresas que fabricam hardware especializado e a consequente manutenção 
+                especializada e lenta renovação na entrega de serviços, sem ter que pagar demais/cobrar demais dos clientes para atingir tal objetivo, 
+                algumas provedoras se juntaram e propuseram NFV que é, basicamente, a prática de desacoplar as funções de rede comumente executadas por 
+                dispositivos proprietários construídos com tal objetivo em mente, do software que as executa.<br>
+                &emsp;&emsp;Isso é alcançado virtualizando tais funções, como as de um firewall, roteador ou gateway, em máquinas programáveis de uso 
+                comum (servidores e switches, por exemplo) por meio de máquinas virtuais nelas instanciadas, funcionando como qualquer nó numa topologia 
+                de rede.<br>
             </div>
         </div>
     </div>
