@@ -16,12 +16,15 @@
     <div class="col-sm-3 sidenav">
       <h4 class="index-title">Network Function Virtualization</h4>
       <ul class="nav nav-pills nav-stacked">
-        <li><a class="side-index" href="nfv.html">O que é NFV</a></li>
-        <li><a class="side-index" href="mudanca-cenario-de-telecomunicacoes.html">Mudança no Cenário de Telecomunicações</a></li>
-        <li><a class="side-index" href="beneficios.html">Benefícios</a></li>
-        <li><a class="side-index" href="desafios.html">Desafios</a></li>
-        <li class="active"><a class="side-index" href="conceitos-relacionados.html">Conceitos Relacionados</a></li>
-        <li><a class="side-index" href="conclusao.html">Conclusão</a></li>
+          <li><a class="side-index" href="nfv.html">O que é NFV</a></li>
+          <li ><a class="side-index" href="arquitetura.html">Arquitetura NFV</a></li>
+          <li><a class="side-index" href="beneficios.html">Benefícios</a></li>
+          <li><a class="side-index" href="desafios.html">Desafios</a></li>
+          <li class="active"><a class="side-index" href="conceitos-relacionados.html">Conceitos Relacionados</a></li>
+          <li><a class="side-index" href="mudanca-cenario-de-telecomunicacoes.html">Mudança no Cenário de Telecomunicações</a></li>
+          <li><a class="side-index" href="modelo-empresarial.html">Modelo Empresarial</a></li>
+          <li><a class="side-index" href="casos-de-uso.html">Casos de Uso</a></li>
+          <li><a class="side-index" href="bibliografia.html">Bibliografia</a></li>
       </ul><br>
     </div>
 
@@ -30,9 +33,39 @@
             <div id="title5" class="title">5. Conceitos relacionados</div>
             <div class="text">
                 <ul>
-                    <li><strong>Cloud Computing:</strong> </li>
-                    <li><strong>Software Defined Networking (SDN):</strong></li>
-                    <li><strong>Como Cloud Computing, SDN e NFV se relacionam:</strong></li>
+                    <li><strong>Redes Definidas por Software (SDN):</strong> Embora sejam conceitos próximos o suficiente para gerar comparações, 
+                      SDN e NFV são diferentes em sua abordagem de “desacoplar o {algo} de {outro algo}”. NFV foca em separar o hardware proprietário 
+                      usado para funções de rede do próprio software que o executa, para garantir redução de custos e maior flexibilidade; enquanto 
+                      SDN separa o controle da rede da seção de encaminhamento de dados, permitindo a criação de um controlador central programável 
+                      que gerencia, organiza e define a maneira que cada nó numa rede (que agora seria o plano de dados da rede) encaminha pacotes 
+                      um para o outro.
+                    </li>
+                    <li><strong>Computação na Nuvem:</strong> Em geral, esse conceito se baseia num modelo que possibilita o acesso, pela rede, a 
+                      uma quantidade arbitrária de recursos configuráveis (de rede, armazenamento, processamento, etc.) de forma flexível e altamente 
+                      automatizada e otimizada, provendo e liberando a quantidade necessária de recursos com gerenciamento e/ou supervisionamento 
+                      mínimo por parte dos provedores do serviço, podendo ser acessado a partir de qualquer tipo de dispositivo (celulares, PCs, 
+                      servidores, etc.); dependendo apenas da demanda de seus usuários, que podem ser vários. Esse conceito se assemelha ao que 
+                      NFV almeja alcançar, mas com as funções específicas de rede, e não apenas aplicações de TI.
+                    </li>
+
+                    <img src="src/image/relacoes.png">
+                    <h5>Figura X: Relação entre SDN, Computação na Nuvem e NFV. Extraído de <a href="https://arxiv.org/pdf/1509.07675.pdf">https://arxiv.org/pdf/1509.07675.pdf</a> no dia 03/06/2018.</h5>
+                    <br>
+
+                    <li><strong>Como Cloud Computing, SDN e NFV se relacionam:</strong> Como mostra a fig. X, e como os 3 conceitos se tratam de 
+                      virtualização com objetivos levemente diferentes, eles podem ser unidos para um suplantar as deficiências do outro: SDN, ao 
+                      criar um controlador geral, permite maior eficiência e agilidade na transferência de dados pela rede, enquanto NFV garante a 
+                      virtualização desse mesmo controlador, visto que ele pode funcionar numa máquina virtual junto com os nós da rede, os quais ele 
+                      vai encadear e gerenciar; já a nuvem pode servir como a própria infraestrutura na qual as VNFs seriam instanciadas, cumprindo 
+                      alguns objetivos que NFV espera alcançar, como compartilhamento de recursos, flexibilidade de serviço e escalabilidade, processos 
+                      já otimizados no próprio sistema de computação na nuvem.<br><br>
+
+                      &emsp;&emsp;Um problema seria a eficiência da nuvem, não para instanciação, gerenciamento e flexibilidade dos serviços oferecidos, mas sim na 
+                      própria execução dos tais. Geralmente espera-se funcionamento praticamente perfeito de serviços de telecomunicação (baixíssima 
+                      latência e altíssima estabilidade e confiabilidade são alguns requisitos), porém a nuvem não garante isso, tendo sido feita para 
+                      atender serviços de TI, que são mais lenientes com seus requisitos. Portanto, mudanças devem ser feitas ao invés de simplesmente 
+                      passar funções de operadoras para a nuvem.
+                      </li>
                 </ul>
             </div>
         </div>

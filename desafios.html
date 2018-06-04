@@ -11,47 +11,71 @@
 </head>
 <body>
 
-<div class="container-fluid">
-  <div class="row content">
-    <div class="col-sm-3 sidenav">
-      <h4 class="index-title">Network Function Virtualization</h4>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a class="side-index" href="nfv.html">O que é NFV</a></li>
-        <li><a class="side-index" href="mudanca-cenario-de-telecomunicacoes.html">Mudança no Cenário de Telecomunicações</a></li>
-        <li><a class="side-index" href="beneficios.html">Benefícios</a></li>
-        <li class="active"><a class="side-index" href="desafios.html">Desafios</a></li>
-        <li><a class="side-index" href="conceitos-relacionados.html">Conceitos Relacionados</a></li>
-        <li><a class="side-index" href="conclusao.html">Conclusão</a></li>
-      </ul><br>
-    </div>
+  <div class="container-fluid">
+    <div class="row content">
+      <div class="col-sm-3 sidenav">
+        <h4 class="index-title">Network Function Virtualization</h4>
+        <ul class="nav nav-pills nav-stacked">
+          <li><a class="side-index" href="nfv.html">O que é NFV</a></li>
+          <li><a class="side-index" href="arquitetura.html">Arquitetura NFV</a></li>
+          <li><a class="side-index" href="beneficios.html">Benefícios</a></li>
+          <li class="active"><a class="side-index" href="desafios.html">Desafios</a></li>
+          <li><a class="side-index" href="conceitos-relacionados.html">Conceitos Relacionados</a></li>
+          <li><a class="side-index" href="mudanca-cenario-de-telecomunicacoes.html">Mudança no Cenário de Telecomunicações</a></li>
+          <li><a class="side-index" href="modelo-empresarial.html">Modelo Empresarial</a></li>
+          <li><a class="side-index" href="casos-de-uso.html">Casos de Uso</a></li>
+          <li><a class="side-index" href="bibliografia.html">Bibliografia</a></li>
+        </ul><br>
+  </div>
 
     <div class="col-sm-9">
         <div class="content">
             <div id="title4" class="title">4. Desafios</div>
             <div class="text">
+              &emsp;&emsp;Embora a infraestrutura de NFV seja uma inovação agradável ao cenário de telecomunicações, de nada ela adiantará se o 
+              serviço fornecido através dessa abstração se mostrar inferior ao uso de hardware proprietário com implantação mais lenta, porém 
+              mais segura. Para que NFV possa competir com a estrutura atual de serviços de rede, ela deve funcionar de maneira semelhante em 
+              termos de performance, segurança e outros, se não melhor que essa estrutura vigente, de forma que o cliente final não perceba mudanças 
+              no funcionamento, ou até se surpreenda com a melhora que essa implementação traria aos serviços de rede; alguns desafios que a 
+              implementação de NFV enfrentará são:<br><br>   
                 <ul>
-                    <li><strong>Segurança e Resiliência:</strong> O desafio a ser enfrentado é a garantia de que a segurança e confiança das redes de operadoras sejam mantidas com sua
-                         virtualização. Embora uma preocupação, espera-se que as redes possam ser recriadas imediatamente após falhas e que sua segurança e confiabilidade
-                         estejam fortemente atreladas à qualidade do <em>hypervisor</em> e de suas configurações.</br>
-                        &emsp;&emsp;De uma forma geral a garantia de segurança virá a partir da resolução de dois problemas, considerados os mais preocupantes: Primeiro a
-                         garantia de que os serviços de dois clientes diferentes não sejam acessíveis um para o outro, que além de uma questão de privacidade, garante que
-                         um problema de segurança em funções de um cliente não possibilite que outros serviços sejam também afetados. Em segundo lugar é preciso que o NFV
-                         seja protegido de conteúdos recebidos pelos seus usuários, com o uso de firewalls, por exemplo, pois isso evitaria o tráfego de dados maliciosos
-                         do usuário para dentro do sistema NFV. 
+
+                    <li><strong>Performance:</strong> O principal benefício de se usar NFV, que é utilizar hardware comum programável para 
+                      criar funções de rede virtuais, reduzindo a importância de dispositivos proprietários no cenário de telecomunicações, 
+                      vem também com seu desafio: como tais dispositivos comuns (i.e.: PCs) não foram construídos exatamente com a função de criar, 
+                      gerenciar e executar funções de rede, seu desempenho em relação aos dispositivos construídos com esse objetivo em mente é menor. 
+                      O primeiro desafio/requisito de uma rede baseada que usa NFV é reduzir a piora na performance, se não for possível manter, 
+                      da execução de tais funções de rede no cluster de máquinas virtuais.
                     </li>
-                    <li><strong>Interoperabilidade:</strong> Esse é o desafio de se padronizar a forma de se virtualizar a rede a partir de máquinas virtuais e
-                         <em>hypervisors</em>. O tópico é bastante importante pois há uma grande facilidade de se criar diferentes sistemas de virtualização ao mesmo
-                          tempo que esses sistemas, embora diferentes, dependam um do outro, assim ressaltando a importância da interoperabilidade.
+                    <li><strong>Heterogeneidade:</strong> O pilar principal da ideia de virtualizar funções de rede e se separar da homogeneidade 
+                      de soluções proprietárias, que impedem a inovação constante proporcionada por software livre e dificultam a interoperabilidade 
+                      entre dispositivos de companhias diferentes. Portanto, toda plataforma NFV deve ser um ambiente aberto capaz de utilizar VNFs 
+                      de diferentes fornecedores, deixando a escolha para as empresas de telecomunicações sobre qual fornecedor e quais funcionalidades 
+                      escolher para seu serviço.
                     </li>
-                    <li><strong>Retrocompatibilidade:</strong> Considerando que existem múltiplas operadoras, com diferentes versões de softwares, é necessário que, além
-                         da padronização da virtualização, haja uma compatibilidade do sistema com versões mais antigas, tendo em vista que a troca e <em>upgrade</em> de
-                          hardware e software não é algo sincronizado entre as operadoras da rede.
+                    <li><strong>Gerenciamento e Estabilidade:</strong> Utilizando a flexibilidade característica de uma infraestrutura NFV, o ambiente 
+                      deve ser capaz de instanciar VNFs no lugar certo e na hora certa, além de alocar recursos necessários e suficientes, levando em 
+                      conta a demanda atual presente sobre os diferentes tipos de função de rede. Outro requisito para garantir a estabilidade do 
+                      serviço de NFV é poder reconfigurar ou reativar VNFs caso elas falhem, podendo até estabelecer redundância de VNFs, como uma 
+                      forma de dividir a carga de processamento entre estas VNFs redundantes e reduzir a probabilidade de uma cadeia de funções falhar, 
+                      reiniciando tarefas em outras VNFs caso uma delas falhe.
                     </li>
-                    <li><strong>Escalabilidade:</strong> Considerando a grandiosidade das redes atuais, é necessário que o sistema consiga garantir uma performance
-                         aceitável para um grande número de usuários. Tal escalabilidade só será atingida com a automação de seus processos.
+                    <li><strong>Retrocompatibilidade:</strong> Adaptar um serviço fornecido por empresas de telecomunicação para usar ambientes de 
+                      rede virtualizados leva tempo, então o ambiente NFV deve ser capaz de trabalhar em conjunto com o hardware proprietário nos 
+                      estágios de transição de uma tecnologia para a outra.
                     </li>
-                    <li><strong>Simplicidade:</strong> É necessário garantir que futuras plataformas NFV sejam mais simples de se operar que as atuais, que contam com uma
-                         complexo grupo de plataformas de rede e sistemas de suporte, se mostrando uma dificuldade para implantação de redes NFV.
+                    <li><strong>Segurança:</strong> Esse é um dos maiores desafios para manter NFV uma tecnologia possível de ser aplicada: é difícil 
+                      manter o ambiente seguro sabendo que as VNFs podem vir de fornecedores diferentes, gerando instabilidade e possíveis brechas de 
+                      segurança; que elas podem ser usadas por companhias terceiras; além dos recursos de rede e armazenamento compartilhados, assim uma 
+                      brecha pode levar à invasão total do sistema. Para isso, cada VNF deve ser protegida em relação a outras, assim uma falha pontual 
+                      não se tornaria geral.
+                    </li>
+                    <li><strong>Escalabilidade:</strong> Considerando a grandiosidade das redes atuais, é necessário que o sistema consiga garantir uma 
+                      performance aceitável para um grande número de usuários. Tal escalabilidade só será atingida com a automação de seus processos.
+                    </li>
+                    <li><strong>Simplicidade:</strong> É necessário garantir que futuras plataformas NFV sejam mais simples de se operar que as 
+                      atuais, que contam com uma complexo grupo de plataformas de rede e sistemas de suporte, se mostrando uma dificuldade para 
+                      implantação de redes NFV.
                     </li>
                 </ul>
             </div>
