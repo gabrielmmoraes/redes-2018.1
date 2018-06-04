@@ -81,11 +81,6 @@
       width: 99.9%;
       min-height: 400px;
   }
-
-  .content:nth-child(even) {
-      background-color: #6e9aad;
-      color: white;
-  }
   
   .grid-container {
       height: 100%;
