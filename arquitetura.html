@@ -14,7 +14,7 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav">
-      <h4 class="index-title">Network Function Virtualization</h4>
+            <h4 class="index-title"><a href="index.html" style="text-decoration: none; color:white;">Network Function Virtualization</a></h4>
       <ul class="nav nav-pills nav-stacked">
             <li><a class="side-index" href="nfv.html">O que é NFV</a></li>
             <li class="active"><a class="side-index" href="arquitetura.html">Arquitetura NFV</a></li>
@@ -36,25 +36,25 @@
             <div class="text">
                 
                 <img src="src/image/arquitetura.png">
-                <h5>Figura X: Arquitetura NFV. Extraído de <a href="https://www.researchgate.net/figure/Simplified-NFV-architecture_fig12_288667888"> https://www.researchgate.net/figure/Simplified-NFV-architecture_fig12_288667888</a> no dia 03/06/2018.</h5>
+                <h5>Figura 2: Arquitetura NFV [2].</h5>
                 <br>
                 
                 <ul>
                     <li><strong>NFVI (Infraestrutura de NFV):</strong> Provê os recursos físicos necessários para a execução das VNFs. 
                         Nela estão contidos o armazenamento, processamento e conexões de rede (por exemplo computadores conectados através 
-                        de switches), e uma camada de virtualização, que virtualiza os recursos físicos de armazenamento e processamento, 
-                        que podem ser representados agora por máquinas virtuais; e também os recursos de conexão da infraestrutura, que 
-                        pode agora ser representado por conexões lógicas entre duas VMs.
+                        de switches), e uma camada de virtualização que virtualiza os recursos físicos de armazenamento e processamento, 
+                        que podem ser representados agora por máquinas virtuais; e também os recursos de conexão da infraestrutura, passando a serem 
+                        representado por conexões lógicas entre duas VMs.
                     </li>
                     <li><strong>VNFs:</strong> São a unidade central de trabalho de um sistema NFV; é a implementação virtualizada de 
                         uma função de rede que pode ser executada em cima de uma NFVI. Elas podem, em teoria, executar qualquer função 
                         previamente gerenciada por hardware específico na rede, como por ex.: roteadores, switches, servidores DHCP e firewalls. 
                         Um serviço, portanto, é uma oferta de uma ou mais VNFs ao consumidor geral.
                     </li>
-                    <li><strong>NFV MANO (Orquestrador e Gerenciador de NFV):</strong> é o módulo que se encarrega de criar e providenciar as 
+                    <li><strong>NFV MANO (Orquestrador e Gerenciador de NFV):</strong> É o módulo que se encarrega de criar e providenciar as 
                         VNFs de forma automatizada, configurar as VNFs e a NFVI, e também gerenciar e orquestrar os recursos físicos e virtuais 
                         numa NFVI e nas VNFs além de controlar o ciclo de vida dos recursos de hardware sendo usados. Embora ele foque em tudo que 
-                        diz respeito ao âmbito virtual de NFV, ele pode oferecer compatibilidade aos modelos tradicionais de gerenciamento de redes.
+                        diz respeito ao âmbito virtual de NFV ele também pode oferecer compatibilidade aos modelos tradicionais de gerenciamento de redes.
                    </li>
                 </ul>
             </div>
